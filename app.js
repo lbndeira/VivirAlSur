@@ -50,6 +50,23 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // --- LAZY-LOAD IMÁGENES ---
+    // Observador que cargará imágenes con atributo data-src cuando entren en viewport
+    const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                const dataSrc = img.getAttribute('data-src');
+                if (dataSrc) {
+                    img.src = dataSrc;
+                    img.removeAttribute('data-src');
+                    img.classList.add('loaded');
+                }
+                imgObserver.unobserve(img);
+            }
+        });
+    }, { rootMargin: '100px 0px', threshold: 0.01 });
+
     // --- LÓGICA DE ENVÍO DE FORMULARIOS ---
     const handleFormSubmit = (formId, successMessageId) => {
         const form = document.getElementById(formId);
@@ -155,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="bg-blanco rounded-lg shadow-lg overflow-hidden animate-on-scroll group">
                 <div class="relative">
-                    <img src="${imageUrl}" alt="${content.titulo || 'Propiedad'}" class="w-full aspect-3/2 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <img data-src="${imageUrl}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="${content.titulo || 'Propiedad'}" class="w-full aspect-3/2 object-cover group-hover:scale-105 transition-transform duration-300 lazy-img">
                     <span class="absolute top-4 left-4 bg-arena text-blanco text-xs font-semibold px-3 py-1 rounded-full">${badge}</span>
                 </div>
                 <div class="p-6">
@@ -189,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `
             <div class="bg-blanco rounded-lg shadow-lg overflow-hidden animate-on-scroll group">
-                <img src="${imageUrl}" alt="${content.titulo || 'Caso Real'}" class="w-full h-48 object-cover group-hover:opacity-90 transition-opacity">
+                <img data-src="${imageUrl}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="${content.titulo || 'Caso Real'}" class="w-full h-48 object-cover group-hover:opacity-90 transition-opacity lazy-img">
                 <div class="p-6">
                     <span class="inline-block bg-verde-bahia/10 text-verde-bahia text-xs font-semibold px-3 py-1 rounded-full mb-3">Vendido en ${content.dias_en_mercado || 'X'} días</span>
                     <h3 class="font-serif font-semibold text-xl mb-2">${content.titulo || 'Caso de éxito'}</h3>
@@ -224,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `
             <div class="bg-blanco rounded-lg shadow-lg overflow-hidden animate-on-scroll group">
-                <img src="${imageUrl}" alt="${content.titulo || 'Artículo del blog'}" class="w-full aspect-3/2 object-cover group-hover:opacity-90 transition-opacity">
+                <img data-src="${imageUrl}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="${content.titulo || 'Artículo del blog'}" class="w-full aspect-3/2 object-cover group-hover:opacity-90 transition-opacity lazy-img">
                 <div class="p-6">
                     <h3 class="font-serif font-semibold text-xl mb-3 hover:text-verde-bahia transition">${content.titulo || 'Artículo sin título'}</h3>
                     <p class="text-sm text-gray-600 line-clamp-3 mb-4">${content.resumen || 'Lee más para descubrir el contenido...'}</p>
