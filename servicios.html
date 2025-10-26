@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Servicios | Vivir al Sur</title>
+    <meta name="description" content="Soluciones claras para vender, alquilar o comprar con el mejor resultado. Venta en exclusiva, alquiler redondo y compra guiada.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="tailwind-config.js"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/storyblok-js-client"></script>
+
+</head>
+<body class="bg-blanco text-gris-puerto font-sans">
+
+    <header id="main-header" class="bg-blanco/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container">
+            <nav class="flex justify-between items-center py-4">
+                <a href="index.html" class="nav-link flex items-center gap-3">
+                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 90 L20 40 L60 10 L100 40 L100 90 L20 90 Z" fill="#3F4A4F"/>
+                        <path d="M35 90 L35 55 L75 30 L75 90 L35 90 Z" fill="#C9A07A"/>
+                    </svg>
+                    <span class="text-xl font-serif font-semibold text-gris-puerto hidden sm:block">
+                        <span class="text-verde-bahia">VIVIR</span> AL SUR
+                    </span>
+                </a>
+                <div id="desktop-nav-links" class="hidden lg:flex items-center space-x-8 text-[16px]">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Home</a>
+                    <a href="servicios.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Servicios</a>
+                    <a href="propiedades.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Propiedades</a>
+                    <a href="casos-reales.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Casos Reales</a>
+                    <a href="nosotros.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Nosotros</a>
+                    <a href="blog.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Blog</a>
+                    <a href="contacto.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Contacto</a>
+                </div>
+                <div class="hidden lg:flex items-center">
+                    <a href="index.html#hero-form" class="nav-link bg-verde-bahia text-blanco px-5 py-2.5 rounded-lg font-semibold text-[16px] hover:bg-opacity-90 transform hover:scale-102 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-verde-bahia">Tasación en 24h</a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gris-puerto z-50">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-blanco z-40 p-6 pt-24 text-center">
+        <div class="flex flex-col space-y-6 text-2xl">
+            <a href="index.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Home</a>
+            <a href="servicios.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Servicios</a>
+            <a href="propiedades.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Propiedades</a>
+            <a href="casos-reales.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Casos Reales</a>
+            <a href="nosotros.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Nosotros</a>
+            <a href="blog.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Blog</a>
+            <a href="contacto.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Contacto</a>
+            <a href="index.html#hero-form" class="nav-link mobile-nav-link mt-8 inline-block bg-verde-bahia text-white px-8 py-4 rounded-lg font-semibold text-lg">Tasación en 24h</a>
+        </div>
+    </div>
+
+
+    <main>
+        
+        <section id="servicios" class="page-section">
+            <div class="bg-gradient-to-b from-verde-bahia/5 to-white pt-16 pb-12 md:pt-24 md:pb-16 text-center">
+                <div class="container animate-on-scroll">
+                    <h1 class="text-5xl md:text-6xl font-serif font-semibold">Nuestros servicios</h1>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Soluciones claras para vender, alquilar o comprar con el mejor resultado.</p>
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="index.html#hero-form" class="nav-link bg-verde-bahia text-blanco px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-transform hover:scale-105">Pide tu tasación</a>
+                        <a href="https://wa.me/[TELEFONO]?text=Quiero%20información%20sobre%20vuestros%20servicios" target="_blank" class="border border-verde-bahia/50 text-verde-bahia px-8 py-3 rounded-lg font-semibold hover:bg-verde-bahia/5 transition-transform hover:scale-105"><i class="fab fa-whatsapp mr-2"></i> WhatsApp ahora</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container py-16 md:py-24 space-y-16">
+                <div class="bg-blanco rounded-lg shadow-lg p-8 md:p-12 animate-on-scroll border border-gray-100">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <h2 class="font-serif font-semibold text-3xl md:text-4xl">Exclusiva — Ventas</h2>
+                        <span class="inline-block bg-arena/10 text-arena font-semibold px-4 py-1 rounded-full text-sm mt-4 md:mt-0">Desde 4% + IVA (mín. 3.000 €)</span>
+                    </div>
+                    <p class="text-lg text-gray-600 mb-8">Vende rápido y con mejor precio neto. Centralizamos precio, marketing, visitas y negociación.</p>
+                    
+                    <h4 class="font-semibold text-xl mb-4 text-verde-bahia">¿Qué incluye nuestro servicio Exclusiva?</h4>
+                    <ul class="space-y-3 text-base columns-1 md:columns-2">
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Precio de salida con datos y revisión quincenal.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Home staging básico incluido.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Fotos profesionales y vídeo 4K + vertical.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Ficha y copys en portales para alta conversión.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Publicación multicanal y campañas de marketing.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Visitas agrupadas en ≤ 7 días desde la firma.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Negociación, arras, coordinación de notaría y suministros.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Reporte semanal por WhatsApp.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Garantía: Si no hay oferta cualificada* en 30 días, pagamos la campaña.</span></li>
+                    </ul>
+                    <p class="text-xs text-gray-500 mt-4">*Oferta cualificada = precio dentro del rango pactado + financiación viable.</p>
+                    <p class="text-xs text-gray-500 mt-2">Tarifas “desde” sujetas a inmueble y mercado. No asesoría legal.</p>
+                    <div class="text-center mt-10">
+                        <a href="index.html#hero-form" class="nav-link inline-block bg-verde-bahia text-blanco px-8 py-3.5 rounded-lg font-semibold hover:bg-opacity-90 transition-transform hover:scale-105">Pide tu tasación</a>
+                    </div>
+                </div>
+                
+                <div class="bg-blanco rounded-lg shadow-lg p-8 md:p-12 animate-on-scroll border border-gray-100">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <h2 class="font-serif font-semibold text-3xl md:text-4xl">Alquiler Redondo</h2>
+                        <span class="inline-block bg-arena/10 text-arena font-semibold px-4 py-1 rounded-full text-sm mt-4 md:mt-0">Captación: 1 mes de renta + IVA</span>
+                    </div>
+                    <p class="text-lg text-gray-600 mb-8">Alquila sin sorpresas y con inquilinos filtrados.</p>
+                    
+                    <h4 class="font-semibold text-xl mb-4 text-verde-bahia">Nuestro proceso de alquiler:</h4>
+                    <ul class="space-y-3 text-base max-w-3xl">
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Scoring de inquilino: identidad, solvencia y referencias.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Inventario fotográfico detallado y acta de estado del inmueble.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Redacción de contrato, gestión de depósito y cambios de suministros.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Publicación multicanal y agenda coordinada de visitas.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Entrega de llaves y checklist de entrada.</span></li>
+                    </ul>
+                    <div class="text-center mt-10">
+                        <a href="contacto.html" class="nav-link inline-block bg-gris-puerto text-blanco px-8 py-3.5 rounded-lg font-semibold hover:bg-opacity-90 transition-transform hover:scale-105">Diagnóstico alquiler en 48 h</a>
+                    </div>
+                </div>
+
+                <div class="bg-blanco rounded-lg shadow-lg p-8 md:p-12 animate-on-scroll border border-gray-100">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <h2 class="font-serif font-semibold text-3xl md:text-4xl">Compra Guiada</h2>
+                        <span class="inline-block bg-arena/10 text-arena font-semibold px-4 py-1 rounded-full text-sm mt-4 md:mt-0">1% del precio (mín. 2.000 € + IVA)</span>
+                    </div>
+                    <p class="text-lg text-gray-600 mb-8">Buscamos, negociamos y cerramos por ti.</p>
+                    
+                    <h4 class="font-semibold text-xl mb-4 text-verde-bahia">¿Cómo te ayudamos a comprar?</h4>
+                    <ul class="space-y-3 text-base max-w-3xl">
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Brief inicial para entender tus necesidades y búsqueda activa a medida.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Preselección de inmuebles y organización de visitas eficientes.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Comparativa de mercado y diseño de estrategia de oferta.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Coordinación con entidades para financiación y tasación.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Due diligence básica (cargas, ITE si aplica) y negociación final.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-verde-bahia mt-1 mr-3 w-4 text-center"></i><span>Acompañamiento y revisión de documentación hasta la firma en notaría.</span></li>
+                    </ul>
+                    <div class="text-center mt-10">
+                        <a href="contacto.html" class="nav-link inline-block bg-gris-puerto text-blanco px-8 py-3.5 rounded-lg font-semibold hover:bg-opacity-90 transition-transform hover:scale-105">Quiero que me representéis</a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50/50 rounded-lg p-8 md:p-12 animate-on-scroll">
+                    <h2 class="font-serif font-semibold text-3xl md:text-4xl mb-2">Producción que acelera la venta</h2>
+                    <p class="text-lg text-gray-600 mb-8">Incluida con Exclusiva. Sin adelantos.</p>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <img src="https://placehold.co/600x400/2C6E49/FFFFFF?text=Producción+Profesional" alt="Ejemplo de fotografía inmobiliaria profesional" class="rounded-lg shadow-md">
+                        </div>
+                        <div>
+                            <ul class="space-y-4 text-base">
+                                <li class="flex items-start"><i class="fas fa-star text-arena mt-1 mr-3"></i><span><strong>Home staging básico:</strong> Despersonalización, orden, atrezzo neutro, guía al propietario y optimización de la luz natural.</span></li>
+                                <li class="flex items-start"><i class="fas fa-star text-arena mt-1 mr-3"></i><span><strong>Fotos profesionales y vídeo 4K + vertical:</strong> Material de alta calidad adaptado a cada canal de difusión.</span></li>
+                                <li class="flex items-start"><i class="fas fa-star text-arena mt-1 mr-3"></i><span><strong>Ficha y copys optimizados:</strong> Textos persuasivos y ficha completa en portales para maximizar contactos.</span></li>
+                                <li class="flex items-start"><i class="fas fa-star text-arena mt-1 mr-3"></i><span><strong>Publicación estratégica:</strong> Web, Google Business, portales principales y redes sociales.</span></li>
+                                <li class="flex items-start"><i class="fas fa-star text-arena mt-1 mr-3"></i><span><strong>Campaña de marketing digital</strong> para un lanzamiento potente.</span></li>
+                            </ul>
+                            <p class="text-sm text-gray-500 mt-6"><strong class="text-gris-puerto">Timeline orientativo:</strong> Día 1–2 tasación y guion · Día 3–4 producción · Día 5 publicación y primeras citas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blanco rounded-lg shadow-lg p-8 md:p-12 animate-on-scroll border border-gray-100">
+                    <div class="text-center max-w-3xl mx-auto">
+                        <h2 class="text-4xl font-serif font-semibold">¿Por qué firmar exclusiva?</h2>
+                        <p class="mt-4 text-lg text-gray-600">Más orden, menos tiempo, mejor precio neto.</p>
+                    </div>
+                    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-blanco rounded-lg shadow-inner border border-gray-200 p-8 border-t-4 border-verde-bahia">
+                            <h3 class="font-serif font-semibold text-2xl mb-6 text-center">Exclusiva Vivir Al Sur</h3>
+                            <ul class="space-y-4 text-sm">
+                                <li class="flex items-start"><i class="fas fa-check-circle text-verde-bahia mt-1 mr-3"></i><span><strong>Tiempo en mercado:</strong> Más rápido. Estrategia unificada.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-verde-bahia mt-1 mr-3"></i><span><strong>Control de precio:</strong> Total. Una sola voz negociadora.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-verde-bahia mt-1 mr-3"></i><span><strong>Inversión en marketing:</strong> Máxima. Invertimos desde el día 1.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-verde-bahia mt-1 mr-3"></i><span><strong>Confusión de compradores:</strong> Cero. Un único anuncio y precio.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-verde-bahia mt-1 mr-3"></i><span><strong>Precio neto esperado:</strong> El más alto.*</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-blanco rounded-lg shadow-inner border border-gray-200 p-8">
+                            <h3 class="font-serif font-semibold text-2xl mb-6 text-center">Varias agencias</h3>
+                            <ul class="space-y-4 text-sm text-gray-700">
+                                <li class="flex items-start"><i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i><span><strong>Tiempo en mercado:</strong> Más lento. Anuncios duplicados.</span></li>
+                                <li class="flex items-start"><i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i><span><strong>Control de precio:</strong> Nulo. Guerra de precios a la baja.</span></li>
+                                <li class="flex items-start"><i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i><span><strong>Inversión en marketing:</strong> Mínima. Nadie invierte en serio.</span></li>
+                                <li class="flex items-start"><i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i><span><strong>Confusión de compradores:</strong> Máxima. Diferentes precios y fotos.</span></li>
+                                <li class="flex items-start"><i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i><span><strong>Precio neto esperado:</strong> Más bajo.</span></li>
+                            </ul>
+                        </div>
+                        <div class="bg-blanco rounded-lg shadow-inner border border-gray-200 p-8">
+                            <h3 class="font-serif font-semibold text-2xl mb-6 text-center">Venta particular</h3>
+                            <ul class="space-y-4 text-sm text-gray-700">
+                                <li class="flex items-start"><i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i><span><strong>Tiempo en mercado:</strong> El más lento. Menos visibilidad.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-verde-bahia mt-1 mr-3"></i><span><strong>Control de precio:</strong> Total, pero sin datos de mercado.</span></li>
+                                <li class="flex items-start"><i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i><span><strong>Inversión en marketing:</strong> Depende de ti.</span></li>
+                                <li class="flex items-start"><i class="fas fa-check-circle text-verde-bahia mt-1 mr-3"></i><span><strong>Confusión de compradores:</strong> Baja, si se gestiona bien.</span></li>
+                                <li class="flex items-start"><i class="fas fa-times-circle text-red-500 mt-1 mr-3"></i><span><strong>Precio neto esperado:</strong> Variable. Alto riesgo legal y de negociación.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p class="text-xs text-gray-500">*Con precio recomendado y documentación lista.</p>
+                    </div>
+                    <div class="text-center mt-12">
+                        <a href="contacto.html" class="nav-link inline-block bg-verde-bahia text-blanco px-8 py-3.5 rounded-lg font-semibold hover:bg-opacity-90 transform hover:scale-102 transition-all duration-200">Firmo exclusiva con salida libre 15 días</a>
+                        <p class="text-sm text-gray-600 mt-2">Sin penalización. Producción incluida desde el día 1.</p>
+                    </div>
+                </div>
+
+                <div class="mt-16 md:mt-24 max-w-3xl mx-auto animate-on-scroll">
+                    <h2 class="text-center text-4xl font-serif font-semibold mb-12">FAQ</h2>
+                    <div class="space-y-4">
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Por qué cobráis esa comisión?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Porque optimizamos precio neto y tiempos. Menos concesiones y cierres más limpios.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Qué pasa si no quiero exclusiva?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Sin exclusiva no invertimos igual en producción ni unificamos negociación. Resultado: peor precio neto y más tiempo.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Cuándo veré las primeras visitas?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Con precio recomendado, ≤ 7 días desde la firma.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Qué es una “oferta cualificada”?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Precio en el rango pactado y financiación viable del comprador.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Qué incluye el home staging básico?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Despersonalización, orden, atrezzo neutro y guía práctica. Sin obras.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Puedo cancelar la exclusiva?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Sí. Salida libre 15 días sin penalización. Luego, solo gastos directos documentados de producción si cancelas.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Cómo seleccionáis inquilinos?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Identidad, solvencia, referencias y entrevista. Opción de seguro de impago.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Coordináis notaría y suministros?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Sí. De arras a firma y cambios de suministros.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Publicáis en qué portales?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Web, Google Business, Idealista, Fotocasa y redes.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg overflow-hidden bg-white shadow-sm">
+                            <button class="faq-toggle flex justify-between items-center w-full p-5 text-left font-semibold hover:bg-gray-50 text-base">
+                                <span>¿Cómo me mantenéis informado?</span>
+                                <i class="fas fa-chevron-down transition-transform duration-200 text-gray-400"></i>
+                            </button>
+                            <div class="faq-content text-gray-600 text-base">
+                                <p>Reporte semanal por WhatsApp con visitas, feedback y próximos pasos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <p class="text-lg text-gray-600 mb-4">¿Dudas concretas?</p>
+                        <a href="https://wa.me/[TELEFONO]?text=Tengo%20una%20duda%20sobre%20vuestros%20servicios" target="_blank" class="inline-block border border-verde-bahia/50 text-verde-bahia px-8 py-3.5 rounded-lg font-semibold hover:bg-verde-bahia/5 transition-transform hover:scale-105"><i class="fab fa-whatsapp mr-2"></i> Escríbenos por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gris-puerto text-blanco">
+        <div class="container py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-1">
+                    <a href="index.html" class="nav-link flex items-center gap-3 mb-4">
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 90 L20 40 L60 10 L100 40 L100 90 L20 90 Z" fill="#FFFFFF"/>
+                            <path d="M35 90 L35 55 L75 30 L75 90 L35 90 Z" fill="#C9A07A"/>
+                        </svg>
+                        <span class="text-xl font-serif font-semibold">VIVIR AL SUR</span>
+                    </a>
+                    <p class="text-gray-400 text-sm">Tu casa, resuelta. Inmobiliaria boutique en Algeciras.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Venta Exclusiva Pro</a></li>
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Alquiler Redondo</a></li>
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Compra Guiada</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="blog.html" class="nav-link hover:text-arena transition">Blog</a></li>
+                        <li><a href="casos-reales.html" class="nav-link hover:text-arena transition">Casos de Éxito</a></li>
+                        <li><a href="nosotros.html" class="nav-link hover:text-arena transition">Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>[DIRECCIÓN OFICINA]</li>
+                        <li>[INFO@VIVIRALSUR.COM]</li>
+                        <li>[TELEFONO]</li>
+                        <li>Horario: [L-V 9:00-18:00]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-xs">
+                <p>&copy; 2025 Vivir al Sur S.L. &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Aviso Legal</a> &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Política de Privacidad</a> &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Cookies</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>

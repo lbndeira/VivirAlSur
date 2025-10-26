@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Casos de Éxito | Vivir al Sur</title>
+    <meta name="description" content="Resultados reales de nuestra metodología de venta en Algeciras. Descubre cómo vendimos estas propiedades.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="tailwind-config.js"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/storyblok-js-client"></script>
+
+</head>
+<body class="bg-blanco text-gris-puerto font-sans">
+
+    <header id="main-header" class="bg-blanco/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container">
+            <nav class="flex justify-between items-center py-4">
+                <a href="index.html" class="nav-link flex items-center gap-3">
+                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 90 L20 40 L60 10 L100 40 L100 90 L20 90 Z" fill="#3F4A4F"/>
+                        <path d="M35 90 L35 55 L75 30 L75 90 L35 90 Z" fill="#C9A07A"/>
+                    </svg>
+                    <span class="text-xl font-serif font-semibold text-gris-puerto hidden sm:block">
+                        <span class="text-verde-bahia">VIVIR</span> AL SUR
+                    </span>
+                </a>
+                <div id="desktop-nav-links" class="hidden lg:flex items-center space-x-8 text-[16px]">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Home</a>
+                    <a href="servicios.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Servicios</a>
+                    <a href="propiedades.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Propiedades</a>
+                    <a href="casos-reales.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Casos Reales</a>
+                    <a href="nosotros.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Nosotros</a>
+                    <a href="blog.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Blog</a>
+                    <a href="contacto.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Contacto</a>
+                </div>
+                <div class="hidden lg:flex items-center">
+                    <a href="index.html#hero-form" class="nav-link bg-verde-bahia text-blanco px-5 py-2.5 rounded-lg font-semibold text-[16px] hover:bg-opacity-90 transform hover:scale-102 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-verde-bahia">Tasación en 24h</a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gris-puerto z-50">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-blanco z-40 p-6 pt-24 text-center">
+        <div class="flex flex-col space-y-6 text-2xl">
+            <a href="index.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Home</a>
+            <a href="servicios.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Servicios</a>
+            <a href="propiedades.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Propiedades</a>
+            <a href="casos-reales.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Casos Reales</a>
+            <a href="nosotros.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Nosotros</a>
+            <a href="blog.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Blog</a>
+            <a href="contacto.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Contacto</a>
+            <a href="index.html#hero-form" class="nav-link mobile-nav-link mt-8 inline-block bg-verde-bahia text-white px-8 py-4 rounded-lg font-semibold text-lg">Tasación en 24h</a>
+        </div>
+    </div>
+
+
+    <main>
+
+        <section id="casos-reales" class="page-section">
+            <div class="container py-16 md:py-24">
+                <div class="text-center max-w-3xl mx-auto mb-12 animate-on-scroll">
+                    <h1 class="text-5xl font-serif font-semibold">Casos de Éxito</h1>
+                    <p class="mt-4 text-lg text-gray-600">Resultados reales que demuestran la eficacia de nuestro método.</p>
+                </div>
+
+                <div id="casos-reales-page-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <p class="text-center md:col-span-3 text-gray-500">Cargando casos reales...</p>
+                </div>
+                <div class="mt-16 text-center animate-on-scroll bg-gray-50/50 p-8 rounded-lg">
+                    <h3 class="font-serif font-semibold text-2xl mb-4">¿Quieres ser nuestro próximo caso de éxito?</h3>
+                    <a href="contacto.html" class="nav-link inline-block bg-verde-bahia text-blanco px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-transform hover:scale-105">Repito este proceso en tu vivienda</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gris-puerto text-blanco">
+        <div class="container py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-1">
+                    <a href="index.html" class="nav-link flex items-center gap-3 mb-4">
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 90 L20 40 L60 10 L100 40 L100 90 L20 90 Z" fill="#FFFFFF"/>
+                            <path d="M35 90 L35 55 L75 30 L75 90 L35 90 Z" fill="#C9A07A"/>
+                        </svg>
+                        <span class="text-xl font-serif font-semibold">VIVIR AL SUR</span>
+                    </a>
+                    <p class="text-gray-400 text-sm">Tu casa, resuelta. Inmobiliaria boutique en Algeciras.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Venta Exclusiva Pro</a></li>
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Alquiler Redondo</a></li>
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Compra Guiada</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="blog.html" class="nav-link hover:text-arena transition">Blog</a></li>
+                        <li><a href="casos-reales.html" class="nav-link hover:text-arena transition">Casos de Éxito</a></li>
+                        <li><a href="nosotros.html" class="nav-link hover:text-arena transition">Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>[DIRECCIÓN OFICINA]</li>
+                        <li>[INFO@VIVIRALSUR.COM]</li>
+                        <li>[TELEFONO]</li>
+                        <li>Horario: [L-V 9:00-18:00]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-xs">
+                <p>&copy; 2025 Vivir al Sur S.L. &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Aviso Legal</a> &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Política de Privacidad</a> &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Cookies</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>

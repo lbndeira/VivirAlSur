@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Política de Privacidad | Vivir al Sur</title>
+    <meta name="description" content="Consulta nuestra política de privacidad y cómo tratamos tus datos personales al usar nuestros servicios inmobiliarios.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="tailwind-config.js"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/storyblok-js-client"></script>
+
+</head>
+<body class="bg-blanco text-gris-puerto font-sans">
+
+    <header id="main-header" class="bg-blanco/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container">
+            <nav class="flex justify-between items-center py-4">
+                <a href="index.html" class="nav-link flex items-center gap-3">
+                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 90 L20 40 L60 10 L100 40 L100 90 L20 90 Z" fill="#3F4A4F"/>
+                        <path d="M35 90 L35 55 L75 30 L75 90 L35 90 Z" fill="#C9A07A"/>
+                    </svg>
+                    <span class="text-xl font-serif font-semibold text-gris-puerto hidden sm:block">
+                        <span class="text-verde-bahia">VIVIR</span> AL SUR
+                    </span>
+                </a>
+                <div id="desktop-nav-links" class="hidden lg:flex items-center space-x-8 text-[16px]">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Home</a>
+                    <a href="servicios.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Servicios</a>
+                    <a href="propiedades.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Propiedades</a>
+                    <a href="casos-reales.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Casos Reales</a>
+                    <a href="nosotros.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Nosotros</a>
+                    <a href="blog.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Blog</a>
+                    <a href="contacto.html" class="nav-link text-gray-600 hover:text-verde-bahia transition duration-300 font-medium">Contacto</a>
+                </div>
+                <div class="hidden lg:flex items-center">
+                    <a href="index.html#hero-form" class="nav-link bg-verde-bahia text-blanco px-5 py-2.5 rounded-lg font-semibold text-[16px] hover:bg-opacity-90 transform hover:scale-102 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-verde-bahia">Tasación en 24h</a>
+                </div>
+                <button id="mobile-menu-button" class="lg:hidden text-gris-puerto z-50">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 bg-blanco z-40 p-6 pt-24 text-center">
+        <div class="flex flex-col space-y-6 text-2xl">
+            <a href="index.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Home</a>
+            <a href="servicios.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Servicios</a>
+            <a href="propiedades.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Propiedades</a>
+            <a href="casos-reales.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Casos Reales</a>
+            <a href="nosotros.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Nosotros</a>
+            <a href="blog.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Blog</a>
+            <a href="contacto.html" class="nav-link mobile-nav-link text-gray-700 hover:text-verde-bahia">Contacto</a>
+            <a href="index.html#hero-form" class="nav-link mobile-nav-link mt-8 inline-block bg-verde-bahia text-white px-8 py-4 rounded-lg font-semibold text-lg">Tasación en 24h</a>
+        </div>
+    </div>
+
+
+    <main>
+
+        <section id="privacidad" class="page-section">
+            <div class="container py-16 md:py-24">
+                <h1 class="text-4xl font-serif font-semibold mb-8">Política de Privacidad</h1>
+                <div class="prose max-w-none text-gray-700"> 
+                    <p><strong>[NOMBRE RESPONSABLE - VIVIR AL SUR S.L.]</strong>, con NIF [NIF] y domicilio en [DIRECCIÓN COMPLETA], es el responsable del tratamiento de los datos personales recogidos a través de este sitio web.</p>
+                        
+                    <h2 class="text-2xl font-semibold mt-6 mb-3">Finalidad del tratamiento</h2>
+                    <p>Los datos que nos facilites a través de los formularios de contacto o por otros medios (teléfono, email) serán tratados con la finalidad de:</p>
+                    <ul>
+                        <li>Gestionar tu solicitud de información, tasación o contacto.</li>
+                        <li>Prestar los servicios inmobiliarios solicitados (intermediación en compraventa, alquiler, etc.).</li>
+                        <li>Enviar comunicaciones comerciales sobre nuestros servicios, si nos das tu consentimiento explícito.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold mt-6 mb-3">Legitimación</h2>
+                    <p>La base legal para el tratamiento de tus datos es tu consentimiento explícito al aceptar esta política y marcar las casillas correspondientes en los formularios, así como la ejecución de la relación precontractual o contractual derivada de tu solicitud de servicios.</p>
+
+                    <h2 class="text-2xl font-semibold mt-6 mb-3">Conservación de los datos</h2>
+                    <p>Conservaremos tus datos durante el tiempo necesario para cumplir con la finalidad para la que fueron recogidos y para determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad y del tratamiento de los datos, además de los periodos establecidos en la normativa de archivos y documentación.</p>
+
+                    <h2 class="text-2xl font-semibold mt-6 mb-3">Destinatarios</h2>
+                    <p>Con carácter general no se comunicarán los datos personales a terceros, salvo obligación legal o necesidad para la prestación del servicio (ej. notaría, entidades financieras si aplica). [DETALLAR CESIONES SI LAS HAY, EJ. PROVEEDORES DE EMAIL MARKETING CON CONSENTIMIENTO].</p>
+
+                    <h2 class="text-2xl font-semibold mt-6 mb-3">Derechos</h2>
+                    <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad de tus datos dirigiéndote por escrito a [DIRECCIÓN POSTAL] o por email a [EMAIL PARA EJERCICIO DE DERECHOS], adjuntando copia de tu DNI. También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).</p>
+
+                    <h2 class="text-2xl font-semibold mt-6 mb-3">Cookies</h2>
+                    <p>Utilizamos cookies [PROPIAS/DE TERCEROS] para [FINALIDADES, EJ. MEJORAR LA NAVEGACIÓN, ANÁLISIS ESTADÍSTICO]. Puedes obtener más información y configurar tus preferencias en nuestra <a href="#" class="text-verde-bahia hover:underline">Política de Cookies</a>. (Añade un enlace si tienes una página separada para cookies)</p>
+                    
+                    <p class="mt-6 text-sm">Fecha de última actualización: [FECHA]</p>
+                    <p class="text-xs text-gray-500">Este es un texto legal de ejemplo. Debe ser revisado y completado por un asesor legal especializado en protección de datos.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gris-puerto text-blanco">
+        <div class="container py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-1">
+                    <a href="index.html" class="nav-link flex items-center gap-3 mb-4">
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 90 L20 40 L60 10 L100 40 L100 90 L20 90 Z" fill="#FFFFFF"/>
+                            <path d="M35 90 L35 55 L75 30 L75 90 L35 90 Z" fill="#C9A07A"/>
+                        </svg>
+                        <span class="text-xl font-serif font-semibold">VIVIR AL SUR</span>
+                    </a>
+                    <p class="text-gray-400 text-sm">Tu casa, resuelta. Inmobiliaria boutique en Algeciras.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Venta Exclusiva Pro</a></li>
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Alquiler Redondo</a></li>
+                        <li><a href="servicios.html" class="nav-link hover:text-arena transition">Compra Guiada</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="blog.html" class="nav-link hover:text-arena transition">Blog</a></li>
+                        <li><a href="casos-reales.html" class="nav-link hover:text-arena transition">Casos de Éxito</a></li>
+                        <li><a href="nosotros.html" class="nav-link hover:text-arena transition">Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>[DIRECCIÓN OFICINA]</li>
+                        <li>[INFO@VIVIRALSUR.COM]</li>
+                        <li>[TELEFONO]</li>
+                        <li>Horario: [L-V 9:00-18:00]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-6 text-center text-gray-400 text-xs">
+                <p>&copy; 2025 Vivir al Sur S.L. &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Aviso Legal</a> &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Política de Privacidad</a> &nbsp;&bull;&nbsp; <a href="privacidad.html" class="nav-link hover:text-arena">Cookies</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>
