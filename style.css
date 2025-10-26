@@ -32,6 +32,18 @@
     /* Transitions */
     --t-fast: 180ms;
     --t-medium: 320ms;
+
+    /* Breakpoints */
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+
+    /* Semantic colors */
+    --color-primary: var(--verde-bahia);
+    --color-secondary: var(--arena);
+    --color-bg: var(--blanco);
+    --color-text: var(--gris-puerto);
 }
 
 /* sensible defaults */
@@ -56,41 +68,68 @@ body{
 .container{width:100%;max-width:var(--max-width);margin-left:auto;margin-right:auto;padding-left:var(--container-padding);padding-right:var(--container-padding)}
 
 .grid{display:grid;gap:var(--spacing-md)}
-@media (min-width:768px){
+@media (min-width:var(--bp-md)){
     .grid-cols-2{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:var(--bp-lg)){
     .grid-cols-3{grid-template-columns:repeat(3,1fr)}
 }
 
+/* Tighten container padding on large screens */
+@media (min-width:var(--bp-lg)){
+  .container{padding-left:2rem;padding-right:2rem}
+}
+
 /* ---------- TYPOGRAPHY ---------- */
-h1{font-family:'Fraunces',serif;font-size:var(--h1);line-height:1.08;margin:0 0 var(--spacing-md)}
-h2{font-family:'Fraunces',serif;font-size:var(--h2);margin:0 0 var(--spacing-md)}
+h1{font-family:'Fraunces',serif;font-size:var(--h1);line-height:1.08;margin:0 0 var(--spacing-md);color:var(--color-text)}
+h2{font-family:'Fraunces',serif;font-size:var(--h2);margin:0 0 var(--spacing-md);color:var(--color-text)}
 p.lead{font-size:var(--lead);color:var(--muted);margin:0 0 var(--spacing-base)}
 
 .font-serif{font-family:'Fraunces',serif}
 
 /* Small helpers for text truncation fallback */
-.line-clamp-3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.line-clamp-3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;-webkit-box-orient:vertical;line-clamp:3}
 
 /* ---------- COMPONENTS BASE ---------- */
-.card{background:var(--blanco);border-radius:8px;box-shadow:0 6px 18px rgba(18,23,28,0.06);padding:var(--spacing-md)}
+.card{background:var(--color-bg);border-radius:8px;box-shadow:0 6px 18px rgba(18,23,28,0.06);padding:var(--spacing-md)}
 
 .button,button[type="submit"],a.btn{display:inline-block;padding:0.75rem 1.25rem;border-radius:6px;font-weight:600;border:none;background:var(--verde-bahia);color:var(--blanco);text-decoration:none;cursor:pointer;transition:transform var(--t-medium),box-shadow var(--t-medium)}
 .button.secondary{background:transparent;color:var(--verde-bahia);border:1px solid rgba(44,110,73,0.12)}
 .button:active{transform:translateY(1px)}
 
 /* ---------- HEADER / NAV ---------- */
-header#main-header{background:rgba(255,255,255,0.9);backdrop-filter:blur(6px)}
+header#main-header{background:rgba(255,255,255,0.95);backdrop-filter:blur(6px);position:sticky;top:0;z-index:60}
 .nav-link{color:var(--muted);text-decoration:none}
-.nav-link:hover{color:var(--verde-bahia)}
+.nav-link:hover{color:var(--color-primary)}
 
 #desktop-nav-links a.nav-link.text-verde-bahia{color:var(--verde-bahia)}
 
 /* Mobile menu basic fallback */
-#mobile-menu{background:var(--blanco)}
+/* Mobile menu (hidden by default, slides from top on small screens or from right on very small) */
+#mobile-menu{
+    background:var(--color-bg);
+    position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;padding:2rem;transform:translateY(-6%);opacity:0;pointer-events:none;transition:transform var(--t-medium) ease,opacity var(--t-medium) ease
+}
+
+/* Visible state */
+.mobile-open{transform:translateY(0);opacity:1;pointer-events:auto}
+
+/* Mobile nav links styling inside the menu */
+#mobile-menu .mobile-nav-link{font-size:1.125rem;padding:0.75rem 0;display:block}
 
 /* ---------- HERO ---------- */
 .hero{padding:calc(var(--spacing-lg) * 1.2) 0;background:linear-gradient(180deg,rgba(44,110,73,0.03),transparent)}
 .hero .hero-cta{max-width:520px}
+
+/* Responsive typography adjustments */
+@media (min-width:var(--bp-sm)){
+    h1{font-size:2.75rem}
+    h2{font-size:2rem}
+}
+@media (min-width:var(--bp-lg)){
+    h1{font-size:3.5rem}
+    h2{font-size:2.25rem}
+}
 
 /* ---------- FORMS ---------- */
 input[type="text"],input[type="tel"],select,textarea{width:100%;padding:0.75rem;border:1px solid rgba(15,23,42,0.06);border-radius:8px;background:transparent;color:var(--text-primary);outline:none;transition:box-shadow var(--t-fast),border-color var(--t-fast)}
@@ -115,8 +154,15 @@ input:focus,select:focus,textarea:focus{box-shadow:0 6px 18px rgba(44,110,73,0.0
 
 /* ---------- RESPONSIVE HELPERS ---------- */
 @media (max-width:767px){
-    .container{padding-left:1rem;padding-right:1rem}
-    h1{font-size:2rem}
+        .container{padding-left:1rem;padding-right:1rem}
+        h1{font-size:2rem}
+}
+
+/* Improve spacing for small devices */
+@media (max-width:480px){
+    .section{padding:var(--spacing-md) 0}
+    .card{padding:var(--spacing-base)}
+    .hero{padding:var(--spacing-lg) 0}
 }
 
 /* ---------- FOOTER ---------- */
