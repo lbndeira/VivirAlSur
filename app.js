@@ -349,6 +349,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.observe(el);
             }
         });
+        
+            // 6. Observa imágenes lazy añadidas dinámicamente
+            const lazyImages = document.querySelectorAll('img[data-src]');
+            lazyImages.forEach(img => {
+                // Si ya tiene src válido, marca como loaded; si no, observa
+                if (img.getAttribute('src') && !img.getAttribute('data-src')) {
+                    img.classList.add('loaded');
+                } else {
+                    imageObserver.observe(img);
+                }
+            });
     }
     
     // --- Ejecutar la función inicial ---
